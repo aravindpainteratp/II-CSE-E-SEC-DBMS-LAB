@@ -8,7 +8,7 @@ DESC Sailor;
 
 INSERT INTO sailor
 VALUES(22,'DUSTIN',7,45.0);
-DESC sailors2;
+DESC sailor;
 INSERT INTO sailor
 VALUES (95,'BOB',3,63.5);
 INSERT INTO sailor

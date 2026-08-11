@@ -40,6 +40,8 @@ SELECT * FROM sailor;
 ```
 COMMIT;
 ```
+## SCREEN SHOT FOR ABOVE TABLE
+![ experiment 2 ](experiment2.png)
 ## Boats table created
 ```
 CREATE TABLE boats(
@@ -68,4 +70,4 @@ DESC reserves;
 ```
 ### Screen shots
 
-![ experiment 2 ](experiment2.png)
+
