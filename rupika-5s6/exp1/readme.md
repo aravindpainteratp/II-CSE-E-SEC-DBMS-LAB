@@ -14,8 +14,6 @@ major VARCHAR2(20) );
       VALUES('smith',17,1,'cs');
             INSERT INTO studenta
             VALUES('brown',8,2,'cs');
-
-![output](Screenshot(59).png)
             
      DSEC studenta;
 ![output](Screenshot(60).png)       
