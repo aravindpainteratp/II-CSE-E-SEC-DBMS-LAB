@@ -7,7 +7,7 @@ name VARCHAR2(20),
 student_number NUMBER,
 class NUMBER,
 major VARCHAR2(20) );
-![output](exp1op.png)
+![output](exp1/exp1op.png)
 
    
       INSERT INTO studenta
