@@ -20,7 +20,7 @@ major VARCHAR2(20) );
             
 
          SELECT * FROM studenta;
-![output](Screenshot(61).png)   
+![output](<Screenshot (61).png>)   
             
  CREATE TABLE coursea (
 course_name VARCHAR2(100),
@@ -28,7 +28,7 @@ course_no VARCHAR2(50),
 credit_hours  NUMBER,
 department  VARCHAR2(10) );
 
-![output](Screenshot(62).png)
+![output](<Screenshot (62).png>)
             
 INSERT ALL
 INTO coursea VALUES('INTRO TO CS','cs1310',4,'cs'),
@@ -46,7 +46,7 @@ semester VARCHAR(50),
 year NUMBER,
 instructor VARCHAR2(20));
 
-![output](Screenshot(64).png)
+![output](<Screenshot (64).png>)
             
             INSERT INTO SECTION 
             VALUES(85,'MATH2410','FALL',07,'KING');
