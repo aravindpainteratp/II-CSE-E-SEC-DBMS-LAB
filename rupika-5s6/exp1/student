@@ -1,6 +1,6 @@
 SELECT * FROM tab;
 SELECT * FROM STUDENT;
-DSEC STUDENT;
+DESC STUDENT;
 
 CREATE TABLE studenta(
 name VARCHAR2(20),
@@ -13,7 +13,7 @@ major VARCHAR2(20) );
             INSERT INTO studenta
             VALUES('brown',8,2,'cs');
             
-     DSEC studenta;       
+     DESC studenta;       
             
          SELECT * FROM studenta;   
             
