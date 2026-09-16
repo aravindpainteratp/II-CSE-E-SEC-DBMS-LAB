@@ -16,7 +16,7 @@ major VARCHAR2(20) );
             VALUES('brown',8,2,'cs');
             
      DSEC studenta;
-![output](<Screenshot(60).png>)       
+![output](<Screenshot (60).png>)       
             
 
          SELECT * FROM studenta;
