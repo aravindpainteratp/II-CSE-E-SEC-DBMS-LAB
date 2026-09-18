@@ -171,58 +171,68 @@ Q1
 CREATE VIEW EMP_VIEW AS
 SELECT *
 FROM EMPLOYEE;
-![output](<Screenshot (105).png>)
+
 <img width="1920" height="1080" alt="Screenshot (105)" src="https://github.com/user-attachments/assets/c59de322-8c44-4f10-8e1c-d5002034d826" />
 
 Q2
 CREATE VIEW EMP_BASIC AS
 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, DEPARTMENT, SALARY
 FROM EMPLOYEE;
-![output](<Screenshot (106).png>)
+
+<img width="1920" height="1080" alt="Screenshot (106)" src="https://github.com/user-attachments/assets/de8e072c-0cc2-4f30-8e9f-ec3364f1f515" />
+
 Q3
 SELECT *
 FROM EMP_VIEW;
-![output](<Screenshot (107).png>)
+<img width="1920" height="1080" alt="Screenshot (107)" src="https://github.com/user-attachments/assets/ac492804-7d82-4f19-9de7-d87e0cc0231f" />
+
 Q4
 CREATE VIEW IT_EMPLOYEES AS
 SELECT *
 FROM EMPLOYEE
 WHERE DEPARTMENT = 'IT';
-![output](<Screenshot (108).png>)
+<img width="1920" height="1080" alt="Screenshot (108)" src="https://github.com/user-attachments/assets/bb6d0316-a0ea-43e7-b42e-624433f14fdd" />
+
 Q5
 CREATE VIEW HIGH_SALARY AS
 SELECT *
 FROM EMPLOYEE
 WHERE SALARY > 60000;
-![output](<Screenshot (109).png>)
+<img width="1920" height="1080" alt="Screenshot (109)" src="https://github.com/user-attachments/assets/4b392ec4-2b95-445d-8dc0-fd909a95de53" />
+
 Q6
 CREATE VIEW HYDERABAD_EMP AS
 SELECT *
 FROM EMPLOYEE
 WHERE CITY = 'Hyderabad';
-![output](<Screenshot (110).png>)
+<img width="1920" height="1080" alt="Screenshot (110)" src="https://github.com/user-attachments/assets/d0755229-b2a4-49ee-948d-86f5f122e991" />
+
 Q7
 CREATE VIEW FEMALE_EMP AS
 SELECT *
 FROM EMPLOYEE
 WHERE GENDER = 'Female';
-![output](<Screenshot (111).png>)
+<img width="1920" height="1080" alt="Screenshot (111)" src="https://github.com/user-attachments/assets/c9f775a5-ab62-4a28-a581-241164206499" />
+
 Q8
 CREATE VIEW RECENT_EMPLOYEES AS
 SELECT *
 FROM EMPLOYEE
 WHERE HIRE_DATE >= TO_DATE('01-JAN-2020','DD-MON-YYYY');
-![output](<Screenshot (112).png>)
+<img width="1920" height="1080" alt="Screenshot (112)" src="https://github.com/user-attachments/assets/447b8789-32c6-4f34-81c0-50c0da727f4c" />
+
 Q9
 SELECT EMPLOYEE_ID, FIRST_NAME, SALARY
 FROM HIGH_SALARY;
-![output](<Screenshot (113).png>)
+<img width="1920" height="1080" alt="Screenshot (113)" src="https://github.com/user-attachments/assets/5626dcf1-0c77-4087-b667-57aa1025c52c" />
+
 Q10
 CREATE OR REPLACE VIEW EMP_BASIC AS
 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME,
        DEPARTMENT, SALARY, CITY
 FROM EMPLOYEE;
-![output](<Screenshot (114).png>)
+<img width="1920" height="1080" alt="Screenshot (114)" src="https://github.com/user-attachments/assets/c138757c-725f-49ed-878e-4e630ffe4d47" />
+
 Q11
 CREATE VIEW EMP_SALARY_VIEW AS
 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, SALARY
@@ -235,38 +245,44 @@ SELECT *
 FROM EMPLOYEE
 WHERE DEPARTMENT = 'Sales'
 WITH CHECK OPTION;
-![output](<Screenshot (115).png>)
+<img width="1920" height="1080" alt="Screenshot (115)" src="https://github.com/user-attachments/assets/c197d241-86b2-4884-8a12-c5e6bfb0099a" />
+
 Q13
 UPDATE EMP_BASIC
 SET SALARY = 75000
 WHERE EMPLOYEE_ID = 101;
 
 COMMIT;
-![output](<Screenshot (116).png>)
+<img width="1920" height="1080" alt="Screenshot (116)" src="https://github.com/user-attachments/assets/9a6ff176-f99f-44ba-8c93-485e242a6f7f" />
+
 Q14
 DELETE FROM EMP_VIEW
 WHERE EMPLOYEE_ID = 107;
 
 COMMIT;
-![output](<Screenshot (117).png>)
+<img width="1920" height="1080" alt="Screenshot (117)" src="https://github.com/user-attachments/assets/1b737005-63c4-4e7f-b260-b1a2023e85a1" />
+
 Q15
 INSERT INTO EMP_BASIC
 VALUES (111, 'Ravi', 'Kumar', 'IT', 50000, 'Hyderabad');
 
 COMMIT;
-![output](<Screenshot (118).png>)
+<img width="1920" height="1080" alt="Screenshot (118)" src="https://github.com/user-attachments/assets/116a1cb9-3819-4eb9-95be-e34071243aed" />
+
 Q16
 DESC EMP_BASIC;
 
 Q17
 SELECT *
 FROM IT_EMPLOYEES;
-![output](<Screenshot (119).png>)
+<img width="1920" height="1080" alt="Screenshot (119)" src="https://github.com/user-attachments/assets/be6135b3-ebc5-4a6e-8152-3c3bec0b9ecb" />
+
 Q18
 SELECT *
 FROM HIGH_SALARY
-WHERE SALARY > 70000;
-![output](<Screenshot (120).png>)
+<img width="1920" height="1080" alt="Screenshot (120)" src="https://github.com/user-attachments/assets/c767e149-253d-499b-835f-ab805ea15882" />
+
+
 Q19
 SELECT *
 FROM FEMALE_EMP;
