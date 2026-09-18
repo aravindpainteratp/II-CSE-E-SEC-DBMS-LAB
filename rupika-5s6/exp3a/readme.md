@@ -76,7 +76,7 @@ SELECT employee_id,
        first_name,
        TO_NUMBER(salary) + 5000 AS new_salary
 FROM employee;
-![output (<Screenshot (86).png>)
+![output ](<Screenshot (86).png>)
 Q4
 SELECT *
 FROM employee
@@ -91,17 +91,18 @@ Q6
 SELECT employee_id,
        CONCAT(CONCAT(first_name, ' '), last_name) AS full_name
 FROM employee;
-![output](Screenshot (89).png)
+![output](<Screenshot (89).png>)
 Q7
 SELECT first_name,
        LPAD(first_name, 10, '*') AS padded_name
 FROM employee;
-![output](Screenshot (90).png)
+
+![output](<Screenshot (90).png>)
 Q8
 SELECT first_name,
        RPAD(first_name, 10, '*') AS padded_name
 FROM employee;
-![output](Screenshot (91).png)
+![output](<Screenshot (91).png>)
 Q9
 SELECT LTRIM(first_name) AS trimmed_name
 FROM employee;
@@ -165,7 +166,7 @@ Q1
 CREATE VIEW EMP_VIEW AS
 SELECT *
 FROM EMPLOYEE;
-![output](Screenshot (105))
+![output](<Screenshot (105).png>)
 Q2
 CREATE VIEW EMP_BASIC AS
 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, DEPARTMENT, SALARY
