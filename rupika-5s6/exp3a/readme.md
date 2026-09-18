@@ -192,35 +192,35 @@ CREATE VIEW HIGH_SALARY AS
 SELECT *
 FROM EMPLOYEE
 WHERE SALARY > 60000;
-![output](<Screenshot (109).png>)
+![output](<Screenshot(109).png>)
 Q6
 CREATE VIEW HYDERABAD_EMP AS
 SELECT *
 FROM EMPLOYEE
 WHERE CITY = 'Hyderabad';
-![output](<Screenshot (110).png>)
+![output](<Screenshot(110).png>)
 Q7
 CREATE VIEW FEMALE_EMP AS
 SELECT *
 FROM EMPLOYEE
 WHERE GENDER = 'Female';
-![output](<Screenshot (111).png>)
+![output](<Screenshot(111).png>)
 Q8
 CREATE VIEW RECENT_EMPLOYEES AS
 SELECT *
 FROM EMPLOYEE
 WHERE HIRE_DATE >= TO_DATE('01-JAN-2020','DD-MON-YYYY');
-![output](<Screenshot (112).png>)
+![output](<Screenshot(112).png>)
 Q9
 SELECT EMPLOYEE_ID, FIRST_NAME, SALARY
 FROM HIGH_SALARY;
-![output](<Screenshot (113).png>)
+![output](<Screenshot(113).png>)
 Q10
 CREATE OR REPLACE VIEW EMP_BASIC AS
 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME,
        DEPARTMENT, SALARY, CITY
 FROM EMPLOYEE;
-![output](<Screenshot (114).png>)
+![output](<Screenshot(114).png>)
 Q11
 CREATE VIEW EMP_SALARY_VIEW AS
 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, SALARY
@@ -233,38 +233,38 @@ SELECT *
 FROM EMPLOYEE
 WHERE DEPARTMENT = 'Sales'
 WITH CHECK OPTION;
-![output](<Screenshot (115).png>)
+![output](<Screenshot(115).png>)
 Q13
 UPDATE EMP_BASIC
 SET SALARY = 75000
 WHERE EMPLOYEE_ID = 101;
 
 COMMIT;
-![output](<Screenshot (116).png>)
+![output](<Screenshot(116).png>)
 Q14
 DELETE FROM EMP_VIEW
 WHERE EMPLOYEE_ID = 107;
 
 COMMIT;
-![output](<Screenshot (117).png>)
+![output](<Screenshot(117).png>)
 Q15
 INSERT INTO EMP_BASIC
 VALUES (111, 'Ravi', 'Kumar', 'IT', 50000, 'Hyderabad');
 
 COMMIT;
-![output](<Screenshot (118).png>)
+![output](<Screenshot(118).png>)
 Q16
 DESC EMP_BASIC;
 
 Q17
 SELECT *
 FROM IT_EMPLOYEES;
-![output](<Screenshot (119).png>)
+![output](<Screenshot(119).png>)
 Q18
 SELECT *
 FROM HIGH_SALARY
 WHERE SALARY > 70000;
-![output](<Screenshot (120).png>)
+![output](<Screenshot(120).png>)
 Q19
 SELECT *
 FROM FEMALE_EMP;
