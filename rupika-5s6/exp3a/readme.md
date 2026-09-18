@@ -171,22 +171,22 @@ Q1
 CREATE VIEW EMP_VIEW AS
 SELECT *
 FROM EMPLOYEE;
-![output](<Screenshot (105).png>)
+![output](<Screenshot(105).png>)
 Q2
 CREATE VIEW EMP_BASIC AS
 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, DEPARTMENT, SALARY
 FROM EMPLOYEE;
-![output](<Screenshot (106).png>)
+![output](<Screenshot(106).png>)
 Q3
 SELECT *
 FROM EMP_VIEW;
-![output](<Screenshot (107).png>)
+![output](<Screenshot(107).png>)
 Q4
 CREATE VIEW IT_EMPLOYEES AS
 SELECT *
 FROM EMPLOYEE
 WHERE DEPARTMENT = 'IT';
-![output](<Screenshot (108).png>)
+![output](<Screenshot(108).png>)
 Q5
 CREATE VIEW HIGH_SALARY AS
 SELECT *
