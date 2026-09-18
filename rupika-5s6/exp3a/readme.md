@@ -106,12 +106,15 @@ FROM employee;
 Q9
 SELECT LTRIM(first_name) AS trimmed_name
 FROM employee;
+
 Q10
 SELECT RTRIM(first_name) AS trimmed_name
 FROM employee;
+
 Q11
 SELECT LOWER(first_name) AS first_name
 FROM employee;
+
 Q13
 SELECT INITCAP(first_name) AS first_name
 FROM employee;
@@ -119,6 +122,7 @@ Q14
 SELECT first_name,
        LENGTH(first_name) AS name_length
 FROM employee;
+
 Q15
 SELECT first_name,
        SUBSTR(first_name, 1, 3) AS first_three_chars
@@ -127,6 +131,7 @@ Q16
 SELECT first_name,
        INSTR(LOWER(first_name), 'a') AS position_of_a
 FROM employee;
+
 Q17
 SELECT employee_id,
        first_name,
@@ -171,51 +176,51 @@ Q2
 CREATE VIEW EMP_BASIC AS
 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, DEPARTMENT, SALARY
 FROM EMPLOYEE;
-
+![output](<Screenshot (106).png>)
 Q3
 SELECT *
 FROM EMP_VIEW;
-
+![output](<Screenshot (107).png>)
 Q4
 CREATE VIEW IT_EMPLOYEES AS
 SELECT *
 FROM EMPLOYEE
 WHERE DEPARTMENT = 'IT';
-
+![output](<Screenshot (108).png>)
 Q5
 CREATE VIEW HIGH_SALARY AS
 SELECT *
 FROM EMPLOYEE
 WHERE SALARY > 60000;
-
+![output](<Screenshot (109).png>)
 Q6
 CREATE VIEW HYDERABAD_EMP AS
 SELECT *
 FROM EMPLOYEE
 WHERE CITY = 'Hyderabad';
-
+![output](<Screenshot (110).png>)
 Q7
 CREATE VIEW FEMALE_EMP AS
 SELECT *
 FROM EMPLOYEE
 WHERE GENDER = 'Female';
-
+![output](<Screenshot (111).png>)
 Q8
 CREATE VIEW RECENT_EMPLOYEES AS
 SELECT *
 FROM EMPLOYEE
 WHERE HIRE_DATE >= TO_DATE('01-JAN-2020','DD-MON-YYYY');
-
+![output](<Screenshot (112).png>)
 Q9
 SELECT EMPLOYEE_ID, FIRST_NAME, SALARY
 FROM HIGH_SALARY;
-
+![output](<Screenshot (113).png>)
 Q10
 CREATE OR REPLACE VIEW EMP_BASIC AS
 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME,
        DEPARTMENT, SALARY, CITY
 FROM EMPLOYEE;
-
+![output](<Screenshot (114).png>)
 Q11
 CREATE VIEW EMP_SALARY_VIEW AS
 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, SALARY
@@ -228,38 +233,38 @@ SELECT *
 FROM EMPLOYEE
 WHERE DEPARTMENT = 'Sales'
 WITH CHECK OPTION;
-
+![output](<Screenshot (115).png>)
 Q13
 UPDATE EMP_BASIC
 SET SALARY = 75000
 WHERE EMPLOYEE_ID = 101;
 
 COMMIT;
-
+![output](<Screenshot (116).png>)
 Q14
 DELETE FROM EMP_VIEW
 WHERE EMPLOYEE_ID = 107;
 
 COMMIT;
-
+![output](<Screenshot (117).png>)
 Q15
 INSERT INTO EMP_BASIC
 VALUES (111, 'Ravi', 'Kumar', 'IT', 50000, 'Hyderabad');
 
 COMMIT;
-
+![output](<Screenshot (118).png>)
 Q16
 DESC EMP_BASIC;
 
 Q17
 SELECT *
 FROM IT_EMPLOYEES;
-
+![output](<Screenshot (119).png>)
 Q18
 SELECT *
 FROM HIGH_SALARY
 WHERE SALARY > 70000;
-
+![output](<Screenshot (120).png>)
 Q19
 SELECT *
 FROM FEMALE_EMP;
