@@ -171,7 +171,9 @@ Q1
 CREATE VIEW EMP_VIEW AS
 SELECT *
 FROM EMPLOYEE;
-![output](<Screenshot(105).png>)
+![output](<Screenshot (105).png>)
+<img width="1920" height="1080" alt="Screenshot (105)" src="https://github.com/user-attachments/assets/c59de322-8c44-4f10-8e1c-d5002034d826" />
+
 Q2
 CREATE VIEW EMP_BASIC AS
 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, DEPARTMENT, SALARY
