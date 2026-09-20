@@ -10,17 +10,17 @@ CREATE TABLE EMPLOYEEs (
     HIRE_DATE DATE,
     CITY VARCHAR2(20)
 );
-![output](Screenshot (79).png)
+![output](<Screenshot (79).png>)
 
 INSERT INTO EMPLOYEE VALUES
 (101, 'John', 'Smith', 'M', 'IT_PROG', 'IT', 65000, 5, 
 TO_DATE('15-JAN-2020','DD-MON-YYYY'), 'Hyderabad');
-![output](Screenshot (80).png)
+![output](<Screenshot (80).png>)
 
 INSERT INTO EMPLOYEE VALUES
 (102, 'Anita', 'Sharma', 'F', 'HR_REP', 'HR', 52000, 3, 
 TO_DATE('10-JUN-2019','DD-MON-YYYY'), 'Bengaluru');
-![output](Screenshot (81).png)
+![output](<Screenshot (81).png>)
 
 INSERT INTO EMPLOYEE VALUES
 (103, 'Rahul', 'Kumar', 'M', 'SA_REP', 'Sales', 48000, 8, 
@@ -53,8 +53,8 @@ TO_DATE('14-SEP-2016','DD-MON-YYYY'), 'Kochi');
 INSERT INTO EMPLOYEE VALUES
 (110, 'Arjun', 'Singh', 'M', 'MK_MAN', 'Marketing', 68000, 5, 
 TO_DATE('30-APR-2019','DD-MON-YYYY'), 'Jaipur');
-![output](Screenshot (82).png)
-![output](Screenshot (83).png)
+![output](<Screenshot (82).png>)
+![output](<Screenshot (83).png>)
 COMMIT;
 
 SELECT * FROM EMPLOYEE;
@@ -64,29 +64,29 @@ SELECT employee_id,
        first_name,
        TO_CHAR(hire_date, 'DD-MON-YYYY') AS hire_date
 FROM employee;
-![output](Screenshot (84).png)
+![output](<Screenshot (84).png>)
 Q2
 SELECT employee_id,
        first_name,
        TO_CHAR(salary, 'L9,999,999.00') AS salary
 FROM employee;
-![output](Screenshot (85).png)
+![output](<Screenshot (85).png>)
 Q3
 SELECT employee_id,
        first_name,
        TO_NUMBER(salary) + 5000 AS new_salary
 FROM employee;
-![output (Screenshot (86).png)
+![output (<Screenshot (86).png>)
 Q4
 SELECT *
 FROM employee
 WHERE hire_date > TO_DATE('01-JAN-2020', 'DD-MON-YYYY');
-![output](Screenshot (87).png)
+![output](<Screenshot (87).png>)
 Q5
 SELECT employee_id,
        first_name || ' ' || last_name AS full_name
 FROM employee;
-![output](Screenshot (88).png)
+![output](<Screenshot (88).png>)
 Q6
 SELECT employee_id,
        CONCAT(CONCAT(first_name, ' '), last_name) AS full_name
