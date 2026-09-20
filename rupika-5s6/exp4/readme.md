@@ -1,6 +1,3 @@
-
-```
-
 CREATE TABLE DEPARTMENT (
 DEPT_ID NUMBER PRIMARY KEY,
 DEPT_NAME VARCHAR2(30),
@@ -14,6 +11,7 @@ DESIGNATION VARCHAR2(30),
 SALARY NUMBER, DEPT_ID NUMBER 
 );
 
+
 INSERT INTO EMPLOYEE1 VALUES (101, 'Rahul', 'Manager', 70000,10);
 
 INSERT INTO EMPLOYEE1 VALUES (102, 'Sneha', 'Analyst', 55000,20);
@@ -25,6 +23,7 @@ INSERT INTO EMPLOYEE1 VALUES (104, 'Kiran', 'Sales Executive', 50000,40);
 INSERT INTO EMPLOYEE1 VALUES (105, 'Priya', 'Tester', 45000, NULL);
 
 INSERT INTO EMPLOYEE1 VALUES (106,'Nikhil', 'Developer', 65000,30);
+
 
 Q1
 CREATE TABLE dept1 (
@@ -45,7 +44,6 @@ CREATE TABLE studentS1 (
     sname VARCHAR(50),
     did INT
 );
-
 Q4
 ALTER TABLE studentS1
 ADD CONSTRAINT pk_studentS1 PRIMARY KEY (sid);
@@ -56,21 +54,25 @@ MODIFY sname VARCHAR(50) NOT NULL;
 ALTER TABLE studentS1
 ADD CONSTRAINT fk_studentS1_dept
 FOREIGN KEY (did) REFERENCES dept1(dno);
-
 DESC STUDENTS1;
+
 
 Q5
 INSERT  INTO dept1
 VALUES(1, 'CSE');
 INSERT  INTO dept1
+
   VALUES  (2, 'ME');
 INSERT  INTO dept1
   VALUES(3, 'CE');
+
 INSERT  INTO dept1
+
   VALUES(4, 'EEE');
 INSERT  INTO dept1
   VALUES(5, 'ECE');
 INSERT  INTO dept1
+
   VALUES(6, 'CSM');
 INSERT  INTO dept1
   VALUES(7, 'CSD');
@@ -81,11 +83,13 @@ INSERT INTO studentS1
 VALUES(101, 'Rahul', 1);
 INSERT INTO studentS1
 VALUES(102, 'Priya', 2);
+
 INSERT INTO studentS1
 VALUES(103, 'Arun', 3);
 INSERT INTO studentS1
 VALUES(104, 'Sneha', 4);
 INSERT INTO studentS1
+
 VALUES(105, 'Kiran', 5);
 INSERT INTO studentS1
 VALUES(106, 'Anjali', 6);
@@ -93,12 +97,11 @@ INSERT INTO studentS1
 VALUES(107, 'Ravi', 7);
 INSERT INTO studentS1
 VALUES(108, 'Teja', 1);
+
 INSERT INTO studentS1
 VALUES(109, 'Naveen', 5);
 INSERT INTO studentS1
 VALUES(110, 'Divya', 6);
-
-
 Q7
 SELECT *
 FROM studentS1 s
@@ -107,29 +110,24 @@ NATURAL JOIN
     SELECT dno AS did, dname
     FROM dept1
 ) d;
-
-Q8.
-SELECT * 
+8.
+SELECT *
 FROM studentS1 s, dept1 d
 WHERE s.did = d.dno;
-
 Q9.
 SELECT * FROM studentS1 s, dept1 d
 WHERE s.did > d.dno;
-
 Q10
 SELECT *
 FROM studentS1 s
-
-
 LEFT OUTER JOIN
 (
     SELECT dno AS did, dname
     FROM dept1
 ) d
 USING (did);
-
 Q11
+
 SELECT *
 FROM studentS1 s
 RIGHT OUTER JOIN
@@ -155,8 +153,6 @@ RIGHT JOIN
     FROM dept1
 ) d
 USING (did);
-
-
 Q13
 SELECT *
 FROM studentS1 s
@@ -180,6 +176,7 @@ LEFT JOIN dept1 d
 ON s.did = d.dno
 UNION
 SELECT * FROM studentS1 s
+
 RIGHT JOIN dept1 d
 ON s.did = d.dno;
 Q16
@@ -223,6 +220,7 @@ RIGHT JOIN dept1 d
 ON s.did = d.dno;
 
 SELECT s.sid, s.sname, d.dno, d.dname
+
 FROM studentS1 s
 JOIN dept1 d
 ON s.did > d.dno;
@@ -230,6 +228,14 @@ ON s.did > d.dno;
 SELECT s.sid, s.sname, d.dno, d.dname
 FROM studentS1 s
 CROSS JOIN dept1 d;
+
+
+
+
+
+
+
+
 
 
 
