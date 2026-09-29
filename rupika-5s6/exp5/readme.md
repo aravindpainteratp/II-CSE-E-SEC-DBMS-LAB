@@ -69,7 +69,4 @@ EXCEPTION
         ROLLBACK;
 END;
 /
-
-
-
 ![output](<Screenshot (198).png>)
