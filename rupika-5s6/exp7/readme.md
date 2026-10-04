@@ -5,7 +5,7 @@ COURSE VARCHAR2 (20),
 MARKS NUMBER(3)
 );
 
-[output](<Screenshot (204).png>)
+![output](<Screenshot (204).png>)
 7a
 
 SET SERVEROUTPUT ON;
@@ -23,7 +23,7 @@ INSERT INTO STUDENT VALUES (102, 'Priya', 92);
 INSERT INTO STUDENT VALUES (103, 'Arun', 78);
 [
 COMMIT;
-[output](<Screenshot (205).png>)
+![output](<Screenshot (205).png>)
 
 -- 3. Create the stored procedure
 CREATE OR REPLACE PROCEDURE GET_STUDENT_DETAILS (
