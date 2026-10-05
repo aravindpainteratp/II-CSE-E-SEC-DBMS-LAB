@@ -91,7 +91,6 @@ CREATE TABLE PATIENT (
     DEPARTMENT    VARCHAR2(30),
     DOCTOR_NAME   VARCHAR2(50)
 );
-![output](<Screenshot (224).png>)
 
 -- Insert sample records
 INSERT INTO PATIENT VALUES (101, 'Rahul Kumar', 'Cardiology', 'Dr. Sharma');
