@@ -1,4 +1,4 @@
-CREATE TABLE STUDENT7(
+CREATE TABLE STUDENT7 (
 STUDENT_ID NUMBER(4) PRIMARY KEY,
 STUDENT_NAME VARCHAR2 (30),
 COURSE VARCHAR2 (20),
@@ -45,7 +45,8 @@ EXCEPTION
         P_MARKS := NULL;
 END;
 /
- 
+ ![output](<Screenshot (209).png>)
+
 
 -- 4. Anonymous PL/SQL block to call the procedure
 DECLARE
@@ -59,8 +60,6 @@ BEGIN
         V_STUDENT_NAME,
         V_MARKS
     );
-
-    -- Display returned values
     DBMS_OUTPUT.PUT_LINE('Student ID   : ' || V_STUDENT_ID);
     DBMS_OUTPUT.PUT_LINE('Student Name : ' || V_STUDENT_NAME);
     DBMS_OUTPUT.PUT_LINE('Marks        : ' || V_MARKS);
@@ -87,6 +86,7 @@ INSERT INTO EMPLOYEE7 VALUES (103, 'Arun', 35000);
 INSERT INTO EMPLOYEE7 VALUES (104, 'Sneha', 40000);
 
 COMMIT;
+![output](<Screenshot (210).png>)
 
 
 -- 3. Create stored function
@@ -112,6 +112,7 @@ SELECT
     CALCULATE_ANNUAL_SALARY(MONTHLY_SALARY) AS ANNUAL_SALARY
 FROM EMPLOYEE7;
 
+![output](<Screenshot (211).png>)
 
 7b2
 
@@ -129,12 +130,15 @@ CREATE TABLE STUDENT7b (
 INSERT INTO STUDENT7b VALUES (101, 'Rahul', 'BCA', 85);
 INSERT INTO STUDENT7b VALUES (102, 'Priya', 'BCA', 90);
 INSERT INTO STUDENT7b VALUES (103, 'Arun', 'BBA', 78);
+![output](<Screenshot (212).png>)
+
 INSERT INTO STUDENT7b VALUES (104, 'Sneha', 'BCA', 88);
 INSERT INTO STUDENT7b VALUES (105, 'Kiran', 'BBA', 82);
 INSERT INTO STUDENT7b VALUES (106, 'Anjali', 'MCA', 91);
 
 COMMIT;
 
+![output](<Screenshot (213).png>)
 
 -- 3. Create stored function
 CREATE OR REPLACE FUNCTION COUNT_STUDENTS (
@@ -149,18 +153,17 @@ BEGIN
     INTO V_TOTAL_STUDENTS
     FROM STUDENT7b
     WHERE UPPER(COURSE) = UPPER(P_COURSE);
-
-    -- Return the total number of students
     RETURN V_TOTAL_STUDENTS;
 END;
 /
- 
+ ![output](<Screenshot (214).png>)
 
 -- 4. Invoke the function using SELECT statement
 SELECT
     'BCA' AS COURSE,
     COUNT_STUDENTS('BCA') AS TOTAL_STUDENTS
 FROM DUAL;
+![output](<Screenshot (215).png>)
 
 
 7b3
@@ -173,7 +176,7 @@ CREATE TABLE STUDENT7b3 (
     STUDENT_NAME VARCHAR2(50),
     MARKS        NUMBER
 );
-
+![output](<Screenshot (216).png>)
 -- 2. Insert sample student records
 INSERT INTO STUDENT7b3 VALUES (101, 'Rahul', 85);
 INSERT INTO STUDENT7b3 VALUES (102, 'Priya', 72);
@@ -182,7 +185,7 @@ INSERT INTO STUDENT7b3 VALUES (104, 'Sneha', 42);
 INSERT INTO STUDENT7b3 VALUES (105, 'Kiran', 28);
 
 COMMIT;
-
+![output](<Screenshot (217).png>)
 
 -- 3. Create the stored function
 CREATE OR REPLACE FUNCTION GET_GRADE (
@@ -195,25 +198,19 @@ BEGIN
     -- Determine grade using IF-ELSIF-ELSE
     IF P_MARKS >= 75 THEN
         V_GRADE := 'Distinction';
-
-    ELSIF P_MARKS >= 60 THEN
+ ELSIF P_MARKS >= 60 THEN
         V_GRADE := 'First Class';
-
-    ELSIF P_MARKS >= 50 THEN
+ ELSIF P_MARKS >= 50 THEN
         V_GRADE := 'Second Class';
-
-    ELSIF P_MARKS >= 35 THEN
+ ELSIF P_MARKS >= 35 THEN
         V_GRADE := 'Pass';
-
-    ELSE
+  ELSE
         V_GRADE := 'Fail';
     END IF;
-
-    -- Return the calculated grade
     RETURN V_GRADE;
 END;
 /
- 
+ ![output](<Screenshot (218).png>)
 
 -- 4. Invoke the function using SELECT statement
 SELECT
