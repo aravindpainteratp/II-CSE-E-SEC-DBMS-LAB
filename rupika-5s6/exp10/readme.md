@@ -1,11 +1,9 @@
 
-
 10 experiment 
 
 program 1:
 
 DROP TABLE EMPLOYEE;
-
 
 CREATE TABLE EMPLOYEE (
     EMP_ID      NUMBER PRIMARY KEY,
@@ -14,6 +12,7 @@ CREATE TABLE EMPLOYEE (
     SALARY      NUMBER(10,2),
     CITY        VARCHAR2(50)
 );
+![output](<Screenshot (261).png>)
 
 INSERT INTO EMPLOYEE VALUES (101, 'Ravi',    'IT',      55000, 'Bangalore');
 INSERT INTO EMPLOYEE VALUES (102, 'Priya',   'HR',      48000, 'Chennai');
@@ -31,6 +30,8 @@ COMMIT;
 SELECT *
 FROM EMPLOYEE
 WHERE DEPARTMENT = 'IT';
+
+
 
 
 EXPLAIN PLAN FOR
