@@ -26,6 +26,7 @@ BEGIN
     SELECT student_seq.NEXTVAL INTO :NEW.student_id FROM dual;
 END;
 /
+![output](<Screenshot (270).png>)
 
 INSERT INTO students (name, email, dob, course)
 VALUES ('John Doe', 'john.doe@example.com', TO_DATE('2003-06-15', 'YYYY-MM-DD'), 'Computer Science');
@@ -35,7 +36,7 @@ VALUES ('Jane Smith', 'jane.smith@example.com', TO_DATE('2002-12-20', 'YYYY-MM-D
 
 SELECT * FROM students;
 
-
+![output](<Screenshot (271).png>)
 
 
 EXPERIMENT 2:
@@ -49,11 +50,16 @@ AS
 SELECT course, COUNT(*) AS total_students
 FROM students
 GROUP BY course;
+
+![output](<Screenshot (272).png>)
 SELECT * FROM mv_studentS_course_count;
+![output](<Screenshot (273).png>)
 EXEC DBMS_MVIEW.REFRESH('mv_studentS_course_count');
+![output](<Screenshot (274).png>)
 CREATE MATERIALIZED VIEW LOG ON students
 WITH ROWID, SEQUENCE (course)
 INCLUDING NEW VALUES;
+![output](<Screenshot (275).png>)
 CREATE MATERIALIZED VIEW mv_studentS_course_count
 BUILD IMMEDIATE
 REFRESH FAST
@@ -62,7 +68,7 @@ AS
 SELECT course, COUNT(*) AS total_students
 FROM students
 GROUP BY course;
-
+![output](<Screenshot (276).png>)
 
 
 
@@ -74,7 +80,7 @@ CREATE TABLE students (
     total_marks NUMBER,
     course VARCHAR2(100)
 );
-
+![output](<Screenshot (277).png>)
 INSERT INTO students VALUES (1, 'Alice', 480, 'CSE');
 INSERT INTO students VALUES (2, 'Bob', 450, 'CSE');
 INSERT INTO students VALUES (3, 'Charlie', 450, 'CSE');
@@ -82,6 +88,7 @@ INSERT INTO students VALUES (4, 'David', 500, 'ECE');
 INSERT INTO students VALUES (5, 'Eva', 480, 'ECE');
 INSERT INTO students VALUES (6, 'Frank', 470, 'ECE');
 COMMIT;
+![output](<Screenshot (278).png>)
 SELECT student_id, name, course, total_marks,
        RANK() OVER (PARTITION BY course ORDER BY total_marks DESC) AS rank,
        DENSE_RANK() OVER (PARTITION BY course ORDER BY total_marks DESC) AS dense_rank,
@@ -90,3 +97,4 @@ SELECT student_id, name, course, total_marks,
        LAG(total_marks) OVER (PARTITION BY course ORDER BY total_marks DESC) AS previous_marks,
        LEAD(total_marks) OVER (PARTITION BY course ORDER BY total_marks DESC) AS next_marks
 FROM students;
+![output](<Screenshot (279).png>)
